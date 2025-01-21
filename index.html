@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Length Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">
+            <img src="images/logo_7.png" alt="Sprint Length Calculator Logo">
+            <span class="logo-text">Sprint Length Calculator</span>
+        </a>
+        <div class="user-info">Majd Suleiman</div>
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Optimize Your Sprint<br>Length with Precision</h1>
+            <p class="subtitle">You can calculate your sprint easily now - streamline your Agile process in just a few clicks.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="instruction">Enter the weight and score for each criterion below to calculate your sprint length effectively</p>
+
+        <form id="sprintForm">
+            <div class="criteria-section">
+                <div class="criteria-header">
+                    <h2>Criteria 1</h2>
+                    <button type="button" class="expand-btn" aria-label="Expand section"></button>
+                </div>
+                <div class="criteria-content">
+                    <h3>Business needs change a lot</h3>
+                    <p class="criteria-description">This criterion evaluates the frequency and extent of changes to the business requirements during the project lifecycle.</p>
+                    
+                    <div class="input-group">
+                        <div class="weight-group">
+                            <label>Weight <span class="tooltip-icon" title="The default weight is determined by expert opinions, but you can adjust it according to your project's status.">ℹ️</span></label>
+                            <input type="number" value="5" min="1" max="5">
+                        </div>
+                        <div class="score-group">
+                            <label>Choose Score</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="score1_1" name="score1" value="1" required>
+                                    <label class="radio-label" for="score1_1">1</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score1_2" name="score1" value="2">
+                                    <label class="radio-label" for="score1_2">2</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score1_3" name="score1" value="3">
+                                    <label class="radio-label" for="score1_3">3</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score1_4" name="score1" value="4">
+                                    <label class="radio-label" for="score1_4">4</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score1_5" name="score1" value="5">
+                                    <label class="radio-label" for="score1_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scoring-guidelines">
+                        <h4>Scoring Guidelines:</h4>
+                        <ul>
+                            <li>1: Limited changes with minimal impact.</li>
+                            <li>2-3: Moderate changes with occasional updates.</li>
+                            <li>4-5: Frequent changes requiring constant adjustments and flexibility from the development team.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="criteria-section">
+                <div class="criteria-header">
+                    <h2>Criteria 2</h2>
+                    <button type="button" class="expand-btn" aria-label="Expand section"></button>
+                </div>
+                <div class="criteria-content">
+                    <h3>Client / Product manager needs usable increments on quick pace</h3>
+                    <p class="criteria-description">How important is it to deliver small, functional parts of the product quickly to maintain client satisfaction or meet project timelines?</p>
+                    
+                    <div class="input-group">
+                        <div class="weight-group">
+                            <label>Weight</label>
+                            <input type="number" value="3" min="1" max="5">
+                        </div>
+                        <div class="score-group">
+                            <label>Choose Score</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="score2_1" name="score2" value="1" required>
+                                    <label class="radio-label" for="score2_1">1</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score2_2" name="score2" value="2">
+                                    <label class="radio-label" for="score2_2">2</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score2_3" name="score2" value="3">
+                                    <label class="radio-label" for="score2_3">3</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score2_4" name="score2" value="4">
+                                    <label class="radio-label" for="score2_4">4</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score2_5" name="score2" value="5">
+                                    <label class="radio-label" for="score2_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scoring-guidelines">
+                        <h4>Scoring Guidelines:</h4>
+                        <ul>
+                            <li>1: Minimal urgency for quick, usable increments.</li>
+                            <li>2-3: Moderate need for increments and reviews.</li>
+                            <li>4-5: High impact relies on frequent, usable increments for client satisfaction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="criteria-section">
+                <div class="criteria-header">
+                    <h2>Criteria 3</h2>
+                    <button type="button" class="expand-btn" aria-label="Expand section"></button>
+                </div>
+                <div class="criteria-content">
+                    <h3>Constant Need for feedback from client / product manager</h3>
+                    <p class="criteria-description">This assesses how frequently feedback is required from the client or product manager during the development process.</p>
+                    
+                    <div class="input-group">
+                        <div class="weight-group">
+                            <label>Weight</label>
+                            <input type="number" value="5" min="1" max="5">
+                        </div>
+                        <div class="score-group">
+                            <label>Choose Score</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="score3_1" name="score3" value="1" required>
+                                    <label class="radio-label" for="score3_1">1</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score3_2" name="score3" value="2">
+                                    <label class="radio-label" for="score3_2">2</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score3_3" name="score3" value="3">
+                                    <label class="radio-label" for="score3_3">3</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score3_4" name="score3" value="4">
+                                    <label class="radio-label" for="score3_4">4</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score3_5" name="score3" value="5">
+                                    <label class="radio-label" for="score3_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scoring-guidelines">
+                        <h4>Scoring Guidelines:</h4>
+                        <ul>
+                            <li>1: Feedback is rarely needed; the project can proceed with minimal input from the client or product manager.</li>
+                            <li>2-3: Occasional feedback is necessary to ensure alignment, but it's not a constant requirement.</li>
+                            <li>4-5: Continuous feedback throughout the project helps validate and align with client expectations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="criteria-section">
+                <div class="criteria-header">
+                    <h2>Criteria 4</h2>
+                    <button type="button" class="expand-btn" aria-label="Expand section"></button>
+                </div>
+                <div class="criteria-content">
+                    <h3>Product is known to us</h3>
+                    <p class="criteria-description">This evaluates how familiar the team is with the product being developed.</p>
+                    
+                    <div class="input-group">
+                        <div class="weight-group">
+                            <label>Weight</label>
+                            <input type="number" value="3" min="1" max="5">
+                        </div>
+                        <div class="score-group">
+                            <label>Choose Score</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="score4_1" name="score4" value="1" required>
+                                    <label class="radio-label" for="score4_1">1</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score4_2" name="score4" value="2">
+                                    <label class="radio-label" for="score4_2">2</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score4_3" name="score4" value="3">
+                                    <label class="radio-label" for="score4_3">3</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score4_4" name="score4" value="4">
+                                    <label class="radio-label" for="score4_4">4</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score4_5" name="score4" value="5">
+                                    <label class="radio-label" for="score4_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scoring-guidelines">
+                        <h4>Scoring Guidelines:</h4>
+                        <ul>
+                            <li>1: The product is completely new, and the team has no prior knowledge or experience with it.</li>
+                            <li>2-3: The team has limited familiarity with the product or has worked on similar products before.</li>
+                            <li>4-5: The team has a deep understanding and significant prior experience with the product, making development easier and faster.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="criteria-section">
+                <div class="criteria-header">
+                    <h2>Criteria 5</h2>
+                    <button type="button" class="expand-btn" aria-label="Expand section"></button>
+                </div>
+                <div class="criteria-content">
+                    <h3>Team is new to organization/business</h3>
+                    <p class="criteria-description">This evaluates how familiar the team members are with the organization or business domain.</p>
+                    
+                    <div class="input-group">
+                        <div class="weight-group">
+                            <label>Weight</label>
+                            <input type="number" value="4" min="1" max="5">
+                        </div>
+                        <div class="score-group">
+                            <label>Choose Score</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="score5_1" name="score5" value="1" required>
+                                    <label class="radio-label" for="score5_1">1</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score5_2" name="score5" value="2">
+                                    <label class="radio-label" for="score5_2">2</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score5_3" name="score5" value="3">
+                                    <label class="radio-label" for="score5_3">3</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score5_4" name="score5" value="4">
+                                    <label class="radio-label" for="score5_4">4</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score5_5" name="score5" value="5">
+                                    <label class="radio-label" for="score5_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scoring-guidelines">
+                        <h4>Scoring Guidelines:</h4>
+                        <ul>
+                            <li>1: The team has extensive experience and is fully integrated into the organization, understanding its processes and domain deeply.</li>
+                            <li>2-3: The team has some exposure to the organization or business domain but may still require guidance and onboarding.</li>
+                            <li>4-5: The team is entirely new to the organization and unfamiliar with its business processes or domain.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="criteria-section">
+                <div class="criteria-header">
+                    <h2>Criteria 6</h2>
+                    <button type="button" class="expand-btn" aria-label="Expand section"></button>
+                </div>
+                <div class="criteria-content">
+                    <h3>Project/Product has Good CI/CD</h3>
+                    <p class="criteria-description">This criterion evaluates the level of automation, efficiency, and reliability in the project's Continuous Integration/Continuous Deployment (CI/CD) pipelines. A robust CI/CD setup ensures frequent integration, quick feedback loops, and seamless deployment processes, which significantly enhance development speed and quality.</p>
+                    
+                    <div class="input-group">
+                        <div class="weight-group">
+                            <label>Weight</label>
+                            <input type="number" value="5" min="1" max="5">
+                        </div>
+                        <div class="score-group">
+                            <label>Choose Score</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="score6_1" name="score6" value="1" required>
+                                    <label class="radio-label" for="score6_1">1</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score6_2" name="score6" value="2">
+                                    <label class="radio-label" for="score6_2">2</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score6_3" name="score6" value="3">
+                                    <label class="radio-label" for="score6_3">3</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score6_4" name="score6" value="4">
+                                    <label class="radio-label" for="score6_4">4</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score6_5" name="score6" value="5">
+                                    <label class="radio-label" for="score6_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scoring-guidelines">
+                        <h4>Scoring Guidelines:</h4>
+                        <ul>
+                            <li>1: Manual or missing CI/CD leads to inefficiencies.</li>
+                            <li>2-3: CI/CD is partially automated with some manual steps.</li>
+                            <li>4-5: Fully automated CI/CD in place, allowing frequent integration, testing, and deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="criteria-section">
+                <div class="criteria-header">
+                    <h2>Criteria 7</h2>
+                    <button type="button" class="expand-btn" aria-label="Expand section"></button>
+                </div>
+                <div class="criteria-content">
+                    <h3>Project/Product has LOW dependency on external parties</h3>
+                    <p class="criteria-description">This criterion measures the extent to which the project relies on third-party services, vendors, or collaborators. Lower dependency on external parties enables smoother workflows, fewer delays, and greater control over the development process.</p>
+                    
+                    <div class="input-group">
+                        <div class="weight-group">
+                            <label>Weight</label>
+                            <input type="number" value="5" min="1" max="5">
+                        </div>
+                        <div class="score-group">
+                            <label>Choose Score</label>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="score7_1" name="score7" value="1" required>
+                                    <label class="radio-label" for="score7_1">1</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score7_2" name="score7" value="2">
+                                    <label class="radio-label" for="score7_2">2</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score7_3" name="score7" value="3">
+                                    <label class="radio-label" for="score7_3">3</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score7_4" name="score7" value="4">
+                                    <label class="radio-label" for="score7_4">4</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="score7_5" name="score7" value="5">
+                                    <label class="radio-label" for="score7_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scoring-guidelines">
+                        <h4>Scoring Guidelines:</h4>
+                        <ul>
+                            <li>1: High dependency, frequent external delays.</li>
+                            <li>2-3: Moderate dependency, manageable delays.</li>
+                            <li>4-5: Minimal dependency, autonomous work without significant interruptions.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result" class="result-section">
+                <div class="result-content">
+                    <p id="sprintLength"></p>
+                    <p id="explanation"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <a href="#" class="logo">
+            <img src="images/logo_7.png" alt="Sprint Length Calculator Logo">
+            <span class="logo-text">Sprint Length Calculator <span id="currentYear">2024</span></span>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
